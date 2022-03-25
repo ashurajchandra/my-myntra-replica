@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 function NavSearch() {
     const {data, filterData} = useSelector((state) => state.products)
     const dispatch = useDispatch();
-    console.log("data",data)
+    // console.log("data",data)
     let navigate = useNavigate();
     const url="result?"
     const [words, setWords]=React.useState("")
@@ -15,7 +15,7 @@ function NavSearch() {
         
         navigate(`/result?catagory=${words}`)
     }
-    console.log("words",words)
+    // console.log("words",words)
     return (
         <div className={styles.navserach}>
             <button>

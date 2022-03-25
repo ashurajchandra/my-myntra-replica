@@ -63,25 +63,25 @@ const Navtitle = styled.p`
 
 function Navbar() {
     const navData=[
-        {title:"men",
-        sub:"Topwear",
-        list:["t-shirt","casual shirts","formal Shirts","jackets","Blazers","suits"]},
+        {title:"men"},
+        // sub:"Topwear",
+        // list:["t-shirt","casual shirts","formal Shirts","jackets","Blazers","suits"]},
 
-        {title:"women",
-        sub:"Indian Fusion",
-        list:["kurtas","saree","salvaars","dress materials","Tops","skirts&palazzos"]},
+        {title:"women"},
+        // sub:"Indian Fusion",
+        // list:["kurtas","saree","salvaars","dress materials","Tops","skirts&palazzos"]},
 
-        {title:"kids",
-        sub:"Topwear",
-        list:["t-shirt","shirts","jeans","shorts","trousers","ethnic wear"]},
+        {title:"kids"},
+        // sub:"Topwear",
+        // list:["t-shirt","shirts","jeans","shorts","trousers","ethnic wear"]},
 
-        {title:"home&livings",
-        sub:"Topwear",
-        list:["bedsheets","blankets","bedding sets","bed covers","pillows","pillow covers"]},
+        {title:"home&livings"},
+        // sub:"Topwear",
+        // list:["bedsheets","blankets","bedding sets","bed covers","pillows","pillow covers"]},
 
-        {title:"beauty",
-        sub:"Topwear",
-        list:["lipstick","lip gloss","lip liner","eye liner","kajal","foundation"]}
+        {title:"beauty"},
+        // sub:"Topwear",
+        // list:["lipstick","lip gloss","lip liner","eye liner","kajal","foundation"]}
     ]
     let navigate = useNavigate();
     const handleClick=(el)=>{
@@ -94,18 +94,20 @@ function Navbar() {
     return (
         <div className={styles.navbar}>
             <NavLeft/>
-            <NavLinkdiv>
+          <NavLinkdiv>
                        {navData.map((item,j)=>(
                           <LinkContainer key={j}>
-                            <Link className={styles.navLinks} to={`/${item.title}`}><h4>{item.title.toUpperCase()}</h4></Link>
-                            <SearchDiv >
+                            <Link className={styles.navLinks} to="/">
+                                <h4 className={styles.navLinks}>{item.title.toUpperCase()}</h4>
+                                </Link> 
+                            {/* <SearchDiv >
                                 <h5 className={styles.navLinks3}>{item.sub}</h5>
                                 {item.list.map((el,z)=>(<Navtitle onClick={()=>handleClick(el)} className={styles.navLinks2}>{el.toUpperCase()}</Navtitle>))}
                                 {item.list.map((el,z)=>(<Navtitle onClick={()=>handleClick(el)} className={styles.navLinks2}>{el.toUpperCase()}</Navtitle>))}
                             
-                            </SearchDiv>
+                            </SearchDiv>  */}
                             
-                            </LinkContainer>
+                             </LinkContainer> 
                        ))}
             </NavLinkdiv>
             <NavSearch/>

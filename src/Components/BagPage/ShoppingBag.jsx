@@ -16,23 +16,23 @@ const ShoppingBag = () => {
         <div className={styles.horPartition}>
             <div></div>
             <div className={styles.borderRight}>
-                <PinCode />
-                <Offers />
+                {/* <PinCode />
+                <Offers /> */}
                 <BagProducts />
                 <AddMoreFromWish />
 
             </div>
             
             <div className={styles.billing}>
-                <ApplyCoupons />
+                {/* <ApplyCoupons />
                 <Gift />
-                <PriceDetails />
+                <PriceDetails /> */}
             </div>
         </div>
-        <div className={`${styles.gridImage} `}>
+        {/* <div className={`${styles.gridImage} `}>
             <img src={belowImage} alt="" width="100%"/>
             <div className={`${styles.cursor} ${styles.fontBold}`}>Need Help? Contact Us</div>
-        </div>
+        </div> */}
         </>
     );
 };

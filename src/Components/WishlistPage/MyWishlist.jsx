@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from "./styles.module.css"
 import { useDispatch, useSelector } from "react-redux";
 import { deleteWishData, getWishData, patchWishData, patchWishEmptySize } from '../../Redux/Wishlist/action';
-import SubNavbar from './SubNavbar';
+// import SubNavbar from './SubNavbar';
 import errorIcon from "./images/errorIcon.jpg";
 import { postBagData } from '../../Redux/Bag/action';
 import Footer from "../Footer/Footer.jsx";
@@ -161,7 +161,7 @@ const MyWishlist = () => {
           )}
         </div>
 
-        <SubNavbar />
+        {/* <SubNavbar /> */}
 
         { isDeleted && 
           <div className={ `${styles.deleteDiv}`} >

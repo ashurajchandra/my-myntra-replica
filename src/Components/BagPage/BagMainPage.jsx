@@ -1,6 +1,6 @@
 import React from 'react';
 import BagNavbar from "./BagNavbar";
-import SubNavbar from "./SubNavbar";
+// import SubNavbar from "./SubNavbar";
 import ShoppingBag from "./ShoppingBag";
 import { useSelector } from 'react-redux';
 import {  Navigate} from 'react-router';
@@ -13,7 +13,7 @@ const BagMainPage = () => {
         return (
         <div>
             <BagNavbar />
-            <SubNavbar />
+            {/* <SubNavbar /> */}
             <ShoppingBag />
         </div>
     )

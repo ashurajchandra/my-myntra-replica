@@ -9,7 +9,7 @@ function Home() {
     return (
         <div>
             <HomeOffers/>
-            <ExitingDeals/>
+            {/* <ExitingDeals/> */}
             <OffersHer/>
             <Footer/>
         </div>

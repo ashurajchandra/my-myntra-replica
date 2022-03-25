@@ -12,7 +12,7 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
     const [page, setPage] = useState(1);
     // const [filtersData, setFiltersData] = useState([]);
     // const [dots, setDots] = useState(0);
-    
+    console.log("data in home",data)
 
     const handleAddDataToWishlist = (id) => {
         const wishListItem = filterData.filter(el => el.id === id) 
@@ -99,6 +99,8 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
     return (
         <>
         <div id={styles.main_wrapper}>
+
+      
             {
                 filterData.map((item) => <Link to={`/resultpage/${item.id}`}  className={styles.link} key={item.id}><div onMouseLeave={() => handleResetDots(item.id)} onMouseOver={() => handleChangeDots(item.id)}  className={styles.item_div} >
                     <div>
@@ -108,7 +110,10 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                             <img  alt="" src={item.images[2]} className={styles.item_image}/>
                             <img  alt="" src={item.images[3]} className={styles.item_image}/>
                         </Carousel>
-                    {(item.type === "NEW" || item.type === "NEW SEASON" || item.type === "TRENDING") && <div className={styles.tag_wrapper}><img src={tagImage} alt="" /> <div>{item.type}</div></div>}
+                    {(item.type === "NEW" ||  item.type === "TRENDING") && 
+                    <div className={styles.tag_wrapper}>
+                        {/* <img src={tagImage} alt="" />  */}
+                        <div>{item.type}</div></div>}
                     {item.rating !== "" && <div className={styles.rating_wrapper}><div>{item.rating}</div><div className={styles.rating_image}><img src="https://i.imgur.com/qXeipEM.png" alt=""  style={{width:"100%"}}/></div><div>{`| ${item.review} `}</div></div> }
                     </div>
                     <div className={styles.non_hover_div}>

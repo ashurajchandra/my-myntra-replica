@@ -10,7 +10,7 @@ function Footer() {
         {title:"ONLINESHOPPING",
         sub:["Men","Women","Kids","Home & Living","Beauty","Gift Cards"]},
         {title:"USEFUL LINKS",
-        sub:["Contact Us","FAQ","T&C","Terms of Use","Track Order","Shipping","Cancellation","Returns","Whitehat","Blog"]},
+        sub:["Contact Us","FAQ","T&C","Terms of Use"]},
     ]
 
     return (
