@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300&display=swap');
+
+* {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.bagNav {
+    padding: 20px 0px;
+    padding-left: 70px;
+    padding-right: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bagNav div:nth-child(2) {
+    margin-top: 3px;
+}
+
+.subNav {
+    background-color: #03A685;
+    padding: 3px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.horPartition {
+    display: grid;
+    grid-template-columns: 19% auto 42%;
+    padding-bottom: 100px;
+}
+
+.borderRight {
+    border-right: 1px solid rgb(214, 211, 211);
+    /* text-align: right; */
+    padding-right: 15px;
+    padding-top: 30px;
+    /* padding-left: 32%; */
+}
+
+.pinBox {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(214, 211, 211);
+    padding: 15px;
+    width: 93%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.pinBox div:nth-child(1) {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.pinBox div:nth-child(2) {
+    font-weight: bold;
+    font-size: 13px;
+    color: #FF3F6C;
+    background-color: white;
+    border: 1px solid #FF3F6C;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.offer {
+    border: 1px solid rgb(214, 211, 211);
+    padding: 15px;
+    width: 93%;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 5% auto;
+    margin-bottom: 10px;
+}
+
+.marginBottom {
+    margin-top: -3px;
+    font-weight: 600;
+}
+
+.modelBtn {
+    color: #FF3F6C;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.offerList li {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.shopDetail {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bagCard {
+    border: 1px solid rgb(214, 211, 211);
+    padding: 12px;
+    width: 94%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+/* .padding {
+    padding: 10px;
+} */
+
+.productDiv {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    border-bottom: 1px solid rgb(214, 211, 211);
+}
+
+/* .productDiv > div {
+    border: 2px solid red;
+} */
+
+.productDivSecond {
+    text-align: left;
+    font-size: 15px;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+
+.productDivThird {
+    text-align: right;
+    font-size: 15px;
+    padding-right: 10px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.gridBtn {
+    display: grid;
+    grid-template-columns: 20% 50% auto;
+    padding-top: 10px;
+    color: rgb(65, 63, 63);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.removeDiv {
+    border-right: 1px solid rgb(214, 211, 211);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.addMoreBox {
+    border: 1px solid rgb(214, 211, 211);
+    margin: 25px;
+    width: 92.6%;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    margin-left: 0%;
+    padding: 16px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 6% auto 10%;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+}
+
+.addMoreBox div:nth-child(2) {
+    margin-top: -2px;
+}
+
+.addMoreBox div:nth-child(3) {
+    text-align: right;
+    margin-top: -2px;
+}
+
+.billing {
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 16px;
+    width: 50%;
+    /* padding-left: 32%; */
+}
+
+.coupon {
+    border-bottom: 1px solid rgb(214, 211, 211);
+    /* width: 46%; */
+    padding: 13px 0px;
+    display: grid;
+    grid-template-columns: 12% auto 25%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.coupon div:nth-child(1) {
+    margin-top: 5px;
+}
+
+.coupon div:nth-child(2) {
+    margin-top: 4px;
+}
+
+.coupon div:nth-child(3) {
+    width: 40px;
+    border: 1px solid #FF3F6C;
+    color: #FF3F6C;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 3px 18px;
+}
+
+.priceFlex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.placeOrderBtn {
+    padding: 10px;
+    color: white;
+    background-color: #FF3F6C;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.gridImage {
+    display: grid;
+    grid-template-columns: 75% auto;
+    border-top: 1px solid rgb(214, 211, 211);
+}
+
+.gridImage > div {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.gridModelBtn {
+    display: grid;
+    grid-template-columns: 60% auto;
+    padding-top: 10px;
+    color: rgb(65, 63, 63);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.bagModelCard {
+    width: 430px;
+    /* border: 1px solid red; */
+    background-color: white;
+    position: fixed;
+    top: 0;
+    margin-left: 240px;
+    margin-top: 190px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.flexBagModel {
+    display: grid;
+    grid-template-columns: 14% auto;
+}
+
+.bagModelBg {
+    width: 150%;
+    height: 100vh;
+    background-color: rgb(177, 170, 170);
+    opacity: 50%;
+    position: fixed;
+    top: 0;
+    margin-left: -20%;
+}
+
+.closeBagModel {
+    width: 23px;
+    height: 23px;
+    border: 1px solid grey;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    margin-left: 660px;
+    margin-top: 205px;
+    border-radius: 50%;
+    /* color: grey; */
+}
+
+.closeBagModel div {
+    background: none;
+    margin-top: -7px;
+}
+
+.gridData {
+    display: grid;
+    grid-template-columns: 30% 30% auto;
+    font-weight: bold;
+}
+
+.subGridDiv1 {
+    width: 65px;
+    background-color: rgb(235, 232, 232);
+    padding: 0px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.subGridDiv2 {
+    width: 65px;
+    background-color: rgb(235, 232, 232);
+    padding: 0px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sizeQtyDiv {
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+}
+
+.sizeQtyDiv div {
+    background: none;
+    margin-top: 6px;
+}
+
+.sizeQtyDiv:hover {
+    border: 1px solid #FF3E6C;
+    color: #FF3E6C;
+}
+
+.sizeSelectedQtyDiv {
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid; */
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+    /* color: grey; */
+    border: 1px solid #FF3E6C;
+    color: #FF3E6C;
+}
+
+.sizeSelectedQtyDiv div {
+    background: none;
+    margin-top: 6px;
+}
+
+.gridQtyBtn {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding: 20px 0px;
+}
+
+.qtyDivBox {
+    background-color: white;
+    width: 280px;
+    padding: 25px;
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    margin-left: 21%;
+    margin-top: 200px;
+    /* opacity: 90%; */
+}
+
+.doneQtyBtn {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #FF3E6C;
+    color: white;
+    cursor: pointer;
+}
+
+.bagQtyModelBg {
+    width: 150%;
+    height: 100vh;
+    background-color: rgb(177, 170, 170);
+    opacity: 50%;
+    position: fixed;
+    top: 0;
+    margin-left: -50%;
+}
+
+.closeQtyBagModel {
+    width: 23px;
+    height: 23px;
+    border: 1px solid grey;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    margin-left: 242px;
+    margin-top: 226px;
+    border-radius: 50%;
+    /* color: grey; */
+}
+
+.closeQtyBagModel div {
+    background: none;
+    margin-top: -7px;
+}
+
+.bgcolors {
+    background-color: rgb(219, 215, 215);
+    padding: 130px;
+}
+
+.orderCard {
+    width: 70%;
+    height: 500px;
+    background-color: white;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.fontSizing {
+    font-size: 30px;
+    font-weight: bold;
+    color: teal;
+}
+
+.fontSizing2 {
+    max-width: 650px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btnCntShop {
+    color: #2057e2;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 35px;
+    border-radius: 5px;
+    border: 1px solid #194fd6;
+    cursor: pointer;
+}
+
+.textDec {
+    text-decoration: none;
+}
+
+.lineHeight {
+    line-height: 2;
+}
+
+.teal {
+    color: teal;
+}
+
+.borderBottom {
+    /* width: 46%; */
+    border-bottom: 1px solid rgb(214, 211, 211);
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.marginTop {
+    margin-top: 10px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.fontBold {
+    /* font-size: 15px; */
+    font-weight: bold;
+}
+
+.font15 {
+    font-size: 15px;
+}
+
+.blue {
+    color: #526CD0;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.gray {
+    color: gray;
+}
+
+.red {
+    color: red;
+}
+
+.pink {
+    color: #FF3F6C;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+}
