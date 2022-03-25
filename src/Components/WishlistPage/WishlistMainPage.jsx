@@ -8,14 +8,16 @@ const WishlistMainPage = () => {
 
     const userAuth = useSelector(state=>state.loginred.userAuth)
 
-    return userAuth ? (
+    // return userAuth ? (
+        return (
         <div className={styles.navMargin} >
             <MyWishlist/>
             
         </div>
-    ) : (
-        <Navigate to="/login" />
-    )
+    ) 
+    // : (
+    //     <Navigate to="/login" />
+    // )
 };
 
 export default WishlistMainPage;

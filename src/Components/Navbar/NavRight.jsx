@@ -12,10 +12,10 @@ function NavRight() {
     console.log(bagData.length)
     return (
         <div className={styles.userdiv}>
-            {/* <div onClick={()=>navigate("/login")}>
+            <div onClick={()=>navigate("/login")}>
             <h5><img className={styles.userlogo} src={userlogo} alt="" />
                 <br/>Profile</h5>
-            </div> */}
+            </div>
             <div onClick={()=>navigate("/wishlist")}> 
             <h5><img className={styles.userlogo} src={wishlist} alt="" />
                <br/> Wishlist</h5>

@@ -9,15 +9,17 @@ const BagMainPage = () => {
 
     const userAuth = useSelector(state=>state.loginred.userAuth)
 
-    return userAuth ? (
+    // return userAuth ? (
+        return (
         <div>
             <BagNavbar />
             <SubNavbar />
             <ShoppingBag />
         </div>
-    ) : (
-        <Navigate to="/wishlist" />
     )
+    //  : (
+    //     <Navigate to="/wishlist" />
+    // )
 };
 
 export default BagMainPage;

@@ -18,6 +18,7 @@
     position: fixed;
     top: 0;
     margin-top: 79px;
+    z-index: 100;
 }
 
 .heading {

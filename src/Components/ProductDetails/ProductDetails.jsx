@@ -1,6 +1,9 @@
 import axios from 'axios'
 import React from 'react'
 import { useParams } from 'react-router'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+
 import styles from "./Product.module.css"
 import SubNavbar from "../WishlistPage/SubNavbar"
 import { useDispatch } from 'react-redux'
@@ -15,7 +18,7 @@ function ProductDetails() {
     const dispatch = useDispatch()
 
     const getProductDetails=(id)=>{
-        axios.get(`https://masai-project.herokuapp.com/product_data//${id}`)
+        axios.get(`https://masai-project.herokuapp.com/product_data/${id}`)
         .then((res)=>{
            setData(res.data)
            setLoading(false)
@@ -33,12 +36,17 @@ function ProductDetails() {
           
            <div className={styles.Psubdiv} >
                 <div className={styles.Pimagesubdiv} >
-                   <img className={styles.Pimg1} src={data.images[0]} alt="" />
-                   <img className={styles.Pimg1} src={data.images[1]} alt="" />
+                    <Zoom>
+                    <img className={styles.Pimg1} src={data.images[0]} alt="prod-img" width="500" />
+                    </Zoom>
+                  <Zoom> <img className={styles.Pimg1} src={data.images[1]}  /></Zoom>
+                   
                </div>
                <div className={styles.Pimagesubdiv}>
-                   <img className={styles.Pimg1} src={data.images[2]} alt="" />
-                   <img className={styles.Pimg1} src={data.images[3]} alt="" />
+                   <Zoom> <img className={styles.Pimg1} src={data.images[2]} alt="prod-img" width="500" /></Zoom>
+                   <Zoom>  <img className={styles.Pimg1} src={data.images[3]} alt="prod-img" width="500" /></Zoom>
+                  
+                 
                 </div> 
            </div>
            <div className={styles.Psubdiv1}>
