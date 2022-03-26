@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { css } from "@emotion/react";
+import ClipLoader from "react-spinners/ClipLoader";
+
 import { getData, getDataFilterBySort, getDataFilterByType, setFilterData, updateData } from "../../Redux/ProductListing/action";
 import styles from "./ProductListComp.module.css"
 import tagImage from "./Images/Capturenew24bg.png"
@@ -10,6 +13,7 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
     const dispatch = useDispatch();
     const {data, filterData} = useSelector((state) => state.products)
     const [page, setPage] = useState(1);
+    let [color, setColor] = useState("#ffffff");
     // const [filtersData, setFiltersData] = useState([]);
     // const [dots, setDots] = useState(0);
     console.log("data in home",data)
@@ -95,14 +99,17 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
             const updateFilterData = filterData.map(item => item.id === id ? {...item, isdotvalue : 0} : item)
             dispatch(updateData(updateFilterData));
     }
-
-    return (
+    const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+  `;
+    return (data.length===0)?<ClipLoader color={color}  css={override} size={90} />:(
         <>
         <div id={styles.main_wrapper}>
 
-      
             {
-                filterData.map((item) => <Link to={`/resultpage/${item.id}`}  className={styles.link} key={item.id}><div onMouseLeave={() => handleResetDots(item.id)} onMouseOver={() => handleChangeDots(item.id)}  className={styles.item_div} >
+                filterData.map((item) => <Link to={`/shirtspage/${item.id}`}  className={styles.link} key={item.id}><div onMouseLeave={() => handleResetDots(item.id)} onMouseOver={() => handleChangeDots(item.id)}  className={styles.item_div} >
                     <div>
                         <Carousel  showThumbs={false} selectedItem={item.isdotvalue} showIndicators={false} showArrows={false} showStatus={false}>
                             <img  alt="" src={item.images[0]} className={styles.item_image}/>
@@ -110,10 +117,12 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                             <img  alt="" src={item.images[2]} className={styles.item_image}/>
                             <img  alt="" src={item.images[3]} className={styles.item_image}/>
                         </Carousel>
-                    {(item.type === "NEW" ||  item.type === "TRENDING") && 
-                    <div className={styles.tag_wrapper}>
-                        {/* <img src={tagImage} alt="" />  */}
-                        <div>{item.type}</div></div>}
+                    {
+                    // (item.type === "NEW" ||  item.type === "TRENDING") && 
+                    // <div className={styles.tag_wrapper}>
+                    //     {/* <img src={tagImage} alt="" />  */}
+                    //     <div>{item.type}</div></div>
+                        }
                     {item.rating !== "" && <div className={styles.rating_wrapper}><div>{item.rating}</div><div className={styles.rating_image}><img src="https://i.imgur.com/qXeipEM.png" alt=""  style={{width:"100%"}}/></div><div>{`| ${item.review} `}</div></div> }
                     </div>
                     <div className={styles.non_hover_div}>

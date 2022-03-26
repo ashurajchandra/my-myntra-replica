@@ -3,6 +3,8 @@ import React from 'react'
 import { useParams } from 'react-router'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styles from "./Product.module.css"
 // import SubNavbar from "../WishlistPage/SubNavbar"
@@ -63,7 +65,7 @@ function ProductDetails() {
                    {(data.sizes).map((el,j)=><Sizebutton key={j} el={el}></Sizebutton>)}
                </div>
                <div className={styles.buttondiv}>
-                   <div onClick={()=>{dispatch(postBagData(data));alert("Product added to Bag")}}  className={styles.PbuttonBag}> <img src="" alt="" />ADD TO BAG</div>
+                   <div onClick={()=>{dispatch(postBagData(data)); toast.success("Product added to Bag")}}  className={styles.PbuttonBag}> <img src="" alt="" />ADD TO BAG</div>
                    <div onClick={()=>{dispatch(postWishData(data));alert("Product added to Wishlist")}} className={styles.pWhishlist}><img src="" alt="" />WISHLIST</div>
                </div>
                <div className={styles.repeatmrp}>

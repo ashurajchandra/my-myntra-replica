@@ -12,7 +12,7 @@ function NavRight() {
     console.log(bagData.length)
     return (
         <div className={styles.userdiv}>
-            <div onClick={()=>navigate("/login")}>
+            <div>
             <h5><img className={styles.userlogo} src={userlogo} alt="" />
                 <br/>Profile</h5>
             </div>

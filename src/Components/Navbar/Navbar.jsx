@@ -30,7 +30,7 @@ const NavLinkdiv= styled.div`
     margin-left: 0%;
 `
 
-const LinkContainer= styled.div`
+const categoryContainer= styled.div`
     width: 30%;
     margin:2%;
     margin-top: 16px;
@@ -87,29 +87,22 @@ function Navbar() {
     const handleClick=(el)=>{
         el=el.toLowerCase()
         const param= new URLSearchParams(`category=${el}`)
-        navigate(`/result?${param}`)
+        navigate(`/shirts?${param}`)
     }
     
 
     return (
         <div className={styles.navbar}>
             <NavLeft/>
-          <NavLinkdiv>
+          <div className={styles.categories}>
                        {navData.map((item,j)=>(
-                          <LinkContainer key={j}>
-                            <Link className={styles.navLinks} to="/">
+                        //   <categoryContainer key={j}>
+                        //     <li className={styles.navLinks} >
                                 <h4 className={styles.navLinks}>{item.title.toUpperCase()}</h4>
-                                </Link> 
-                            {/* <SearchDiv >
-                                <h5 className={styles.navLinks3}>{item.sub}</h5>
-                                {item.list.map((el,z)=>(<Navtitle onClick={()=>handleClick(el)} className={styles.navLinks2}>{el.toUpperCase()}</Navtitle>))}
-                                {item.list.map((el,z)=>(<Navtitle onClick={()=>handleClick(el)} className={styles.navLinks2}>{el.toUpperCase()}</Navtitle>))}
-                            
-                            </SearchDiv>  */}
-                            
-                             </LinkContainer> 
+                                /* </li> */
+                             /* </categoryContainer>  */
                        ))}
-            </NavLinkdiv>
+                       </div>
             <NavSearch/>
             <NavRight/> 
         </div>

@@ -1,5 +1,5 @@
 .logodiv{
-    width: 5%;
+    /* width: 5%; */
     background-color: white;
     vertical-align: middle;
     cursor: pointer;
@@ -55,6 +55,13 @@
   background-color: white;
 } */
 
+.categories{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0.6;
+    align-items: center;
+    cursor: pointer;
+}
 /* searchBar */
 .navserach{
     width: 32%;

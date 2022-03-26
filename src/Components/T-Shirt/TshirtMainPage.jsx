@@ -87,9 +87,9 @@ function TShirtMainPage() {
 
     return (
         <div>
-            <div id={styles.note_div}>
+            {/* <div id={styles.note_div}>
                 - As per guidelines, we are only delivering essentials in govt-specified pincodes -
-            </div>
+            </div> */}
                 <Header />
             <div id={styles.wrapper}>
                 <Filter allFilters={allFilters}/>

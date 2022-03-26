@@ -9,11 +9,11 @@ function NavSearch() {
     const dispatch = useDispatch();
     // console.log("data",data)
     let navigate = useNavigate();
-    const url="result?"
+    const url="shirts?"
     const [words, setWords]=React.useState("")
     const handleClick=()=>{
         
-        navigate(`/result?catagory=${words}`)
+        navigate(`/shirts?catagory=${words}`)
     }
     // console.log("words",words)
     return (
