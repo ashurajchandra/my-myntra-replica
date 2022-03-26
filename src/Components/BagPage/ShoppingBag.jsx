@@ -7,17 +7,12 @@ import AddMoreFromWish from "./AddMoreFromWish";
 const ShoppingBag = () => {
     return (
         <>
-
-        <div className={styles.horPartition}>
+ <div className={styles.horPartition}>
             <div></div>
             <div className={styles.borderRight}>
                 <BagProducts />
                 <AddMoreFromWish />
-
             </div>
-            
-            {/* <div className={styles.billing}>
-            </div> */}
         </div>
         </>
     );

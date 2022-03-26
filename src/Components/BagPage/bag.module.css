@@ -4,25 +4,25 @@
     font-family: 'Catamaran', sans-serif;
 }
 
-.bagNav {
+/* .bagNav {
     padding: 20px 0px;
     padding-left: 70px;
     padding-right: 90px;
     display: flex;
     justify-content: space-between;
-}
+} */
 
-.bagNav div:nth-child(2) {
+/* .bagNav div:nth-child(2) {
     margin-top: 3px;
-}
+} */
 
-.subNav {
+/* .subNav {
     background-color: #03A685;
     padding: 3px;
     color: #FFFFFF;
     font-size: 14px;
     font-weight: 600;
-}
+} */
 
 .horPartition {
     display: grid;
@@ -38,7 +38,7 @@
     /* padding-left: 32%; */
 }
 
-.pinBox {
+/* .pinBox {
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(214, 211, 211);
@@ -46,15 +46,15 @@
     width: 93%;
     border-radius: 5px;
     margin-bottom: 8px;
-}
+} */
 
-.pinBox div:nth-child(1) {
+/* .pinBox div:nth-child(1) {
     font-weight: 600;
     font-size: 15px;
     margin-top: 5px;
-}
+} */
 
-.pinBox div:nth-child(2) {
+/* .pinBox div:nth-child(2) {
     font-weight: bold;
     font-size: 13px;
     color: #FF3F6C;
@@ -63,39 +63,40 @@
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
-.offer {
+/* .offer {
     border: 1px solid rgb(214, 211, 211);
     padding: 15px;
     width: 93%;
     border-radius: 5px;
     text-align: left;
     font-size: 15px;
-}
+} */
 
-.grid {
+/* .grid {
     display: grid;
     grid-template-columns: 5% auto;
     margin-bottom: 10px;
-}
+} */
 
-.marginBottom {
+/* .marginBottom {
     margin-top: -3px;
     font-weight: 600;
-}
+} */
 
-.modelBtn {
+/* .modelBtn {
     color: #FF3F6C;
     font-weight: 600;
     cursor: pointer;
-}
+} */
 
-.offerList li {
+/* .offerList li {
     font-size: 13px;
     margin-bottom: 5px;
     color: gray;
-}
+} */
+
 
 .shopDetail {
     display: flex;
@@ -188,57 +189,56 @@
     margin-top: -2px;
 }
 
-.billing {
+/* .billing {
     text-align: left;
     padding-left: 15px;
     padding-top: 16px;
     width: 50%;
-    /* padding-left: 32%; */
-}
+    
+} */
 
-.coupon {
+/* .coupon {
     border-bottom: 1px solid rgb(214, 211, 211);
-    /* width: 46%; */
     padding: 13px 0px;
     display: grid;
     grid-template-columns: 12% auto 25%;
     text-align: left;
     font-size: 14px;
     font-weight: bold;
-}
+} */
 
-.coupon div:nth-child(1) {
+/* .coupon div:nth-child(1) {
     margin-top: 5px;
 }
 
 .coupon div:nth-child(2) {
     margin-top: 4px;
-}
+} */
 
-.coupon div:nth-child(3) {
+/* .coupon div:nth-child(3) {
     width: 40px;
     border: 1px solid #FF3F6C;
     color: #FF3F6C;
     border-radius: 5px;
     margin-bottom: 5px;
     padding: 3px 18px;
-}
+} */
 
-.priceFlex {
+/* .priceFlex {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
-}
+} */
 
-.placeOrderBtn {
+/* .placeOrderBtn {
     padding: 10px;
     color: white;
     background-color: #FF3F6C;
     text-align: center;
     border-radius: 2px;
-}
+} */
 
-.gridImage {
+/* .gridImage {
     display: grid;
     grid-template-columns: 75% auto;
     border-top: 1px solid rgb(214, 211, 211);
@@ -248,7 +248,7 @@
     text-align: left;
     margin-top: 15px;
     font-size: 14px;
-}
+} */
 
 .gridModelBtn {
     display: grid;
@@ -306,31 +306,31 @@
     margin-top: -7px;
 }
 
-.gridData {
+/* .gridData {
     display: grid;
     grid-template-columns: 30% 30% auto;
     font-weight: bold;
-}
+} */
 
-.subGridDiv1 {
+/* .subGridDiv1 {
     width: 65px;
     background-color: rgb(235, 232, 232);
     padding: 0px 8px;
     border-radius: 3px;
     cursor: pointer;
     text-align: center;
-}
+} */
 
-.subGridDiv2 {
+/* .subGridDiv2 {
     width: 65px;
     background-color: rgb(235, 232, 232);
     padding: 0px 8px;
     border-radius: 2px;
     cursor: pointer;
     text-align: center;
-}
+} */
 
-.sizeQtyDiv {
+/* .sizeQtyDiv {
     width: 40px;
     height: 40px;
     border: 1px solid;
@@ -338,58 +338,54 @@
     font-size: 18px;
     font-weight: 600;
     border-radius: 50%;
-}
+} */
 
-.sizeQtyDiv div {
+/* .sizeQtyDiv div {
     background: none;
     margin-top: 6px;
-}
+} */
 
-.sizeQtyDiv:hover {
+/* .sizeQtyDiv:hover {
     border: 1px solid #FF3E6C;
     color: #FF3E6C;
-}
+} */
 
-.sizeSelectedQtyDiv {
+/* .sizeSelectedQtyDiv {
     width: 40px;
     height: 40px;
-    /* border: 1px solid; */
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
     border-radius: 50%;
-    /* color: grey; */
     border: 1px solid #FF3E6C;
     color: #FF3E6C;
-}
+} */
 
-.sizeSelectedQtyDiv div {
+/* .sizeSelectedQtyDiv div {
     background: none;
     margin-top: 6px;
-}
+} */
 
-.gridQtyBtn {
+/* .gridQtyBtn {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     column-gap: 10px;
     row-gap: 15px;
     padding: 20px 0px;
-}
+} */
 
-.qtyDivBox {
+/* .qtyDivBox {
     background-color: white;
     width: 280px;
     padding: 25px;
-    /* border: 2px solid red; */
     border-radius: 5px;
     position: fixed;
     top: 0;
     margin-left: 21%;
     margin-top: 200px;
-    /* opacity: 90%; */
-}
+} */
 
-.doneQtyBtn {
+/* .doneQtyBtn {
     width: 90%;
     border: none;
     border-radius: 5px;
@@ -397,9 +393,9 @@
     background-color: #FF3E6C;
     color: white;
     cursor: pointer;
-}
+} */
 
-.bagQtyModelBg {
+/* .bagQtyModelBg {
     width: 150%;
     height: 100vh;
     background-color: rgb(177, 170, 170);
@@ -407,9 +403,9 @@
     position: fixed;
     top: 0;
     margin-left: -50%;
-}
+} */
 
-.closeQtyBagModel {
+/* .closeQtyBagModel {
     width: 23px;
     height: 23px;
     border: 1px solid grey;
@@ -421,42 +417,41 @@
     margin-left: 242px;
     margin-top: 226px;
     border-radius: 50%;
-    /* color: grey; */
-}
+} */
 
-.closeQtyBagModel div {
+/* .closeQtyBagModel div {
     background: none;
     margin-top: -7px;
-}
+} */
 
-.bgcolors {
+/* .bgcolors {
     background-color: rgb(219, 215, 215);
     padding: 130px;
-}
+} */
 
-.orderCard {
+/* .orderCard {
     width: 70%;
     height: 500px;
     background-color: white;
     margin: auto;
     border-radius: 6px;
     box-shadow: 1px 1px 10px black;
-}
+} */
 
-.fontSizing {
+/* .fontSizing {
     font-size: 30px;
     font-weight: bold;
     color: teal;
-}
+} */
 
-.fontSizing2 {
+/* .fontSizing2 {
     max-width: 650px;
     margin: auto;
     font-size: 20px;
     font-weight: 500;
-}
+} */
 
-.btnCntShop {
+/* .btnCntShop {
     color: #2057e2;
     font-size: 18px;
     font-weight: bold;
@@ -464,26 +459,26 @@
     border-radius: 5px;
     border: 1px solid #194fd6;
     cursor: pointer;
-}
+} */
 
 .textDec {
     text-decoration: none;
 }
 
-.lineHeight {
+/* .lineHeight {
     line-height: 2;
 }
 
 .teal {
     color: teal;
-}
+} */
 
 .borderBottom {
     /* width: 46%; */
     border-bottom: 1px solid rgb(214, 211, 211);
 }
 
-.leftAlign {
+/* .leftAlign {
     text-align: left;
 }
 
@@ -493,7 +488,7 @@
 
 .marginTop20 {
     margin-top: 20px;
-}
+} */
 
 .fontBold {
     /* font-size: 15px; */
@@ -512,17 +507,17 @@
     font-size: 14px;
 }
 
-.gray {
+/* .gray {
     color: gray;
-}
+} */
 
 .red {
     color: red;
 }
 
-.pink {
+/* .pink {
     color: #FF3F6C;
-}
+} */
 
 .lineThrough {
     text-decoration: line-through;

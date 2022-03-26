@@ -16,7 +16,7 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
     let [color, setColor] = useState("#ffffff");
     // const [filtersData, setFiltersData] = useState([]);
     // const [dots, setDots] = useState(0);
-    console.log("data in home",data)
+    // console.log("data in home",data)
 
     const handleAddDataToWishlist = (id) => {
         const wishListItem = filterData.filter(el => el.id === id) 
@@ -107,7 +107,8 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
     return (data.length===0)?<ClipLoader color={color}  css={override} size={90} />:(
         <>
         <div id={styles.main_wrapper}>
-
+            <section style={{width:"100%"}}>
+                <div className={styles.productBase}>
             {
                 filterData.map((item) => <Link to={`/shirtspage/${item.id}`}  className={styles.link} key={item.id}><div onMouseLeave={() => handleResetDots(item.id)} onMouseOver={() => handleChangeDots(item.id)}  className={styles.item_div} >
                     <div>
@@ -130,9 +131,9 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                         <div className={styles.item_sub_heading}>{item.sub_heading}</div>
                         
                         {item.discount === 0 ? <div className={styles.price}>Rs. {item.price}</div> : <div className={styles.item_price_div}>
-                            <div>Rs. {Math.floor(item.price *(100-item.discount) / 100)}</div>
-                            <div>Rs. {item.price}</div>
-                            <div>{`(${item.discount}% OFF)`}</div>
+                            <div>Rs.<span> {Math.floor(item.price *(100-item.discount) / 100)}</span></div>
+                            <div>Rs. <span>{item.price}</span></div>
+                            <div><span>{`(${item.discount}% OFF)`}</span></div>
                         </div>}
                     </div>
                     <div className={styles.hover_div}>
@@ -145,7 +146,10 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                                 dotsArray.map(el => <div className={ item.isdotvalue === el ? styles.dots_div2 : styles.dots_div} key={el}></div> )
                             }
                         </div>
-                        <div onClick={() => handleAddDataToWishlist(item.id)} className={styles.wishlist_button}><img src="https://i.imgur.com/7l3ABgX.png" alt="wishlist_image"  style={{width:"23px", height:"23px", marginLeft:"43px"}}/> <div className={styles.wishlist_text}>WISHLIST</div></div>
+                        <div onClick={() => handleAddDataToWishlist(item.id)} className={styles.wishlist_button}>
+                            <img src="https://i.imgur.com/7l3ABgX.png" alt="wishlist_image"  style={{width:"23px", height:"23px", marginLeft:"35px",marginTop:"-5px"}}/>
+                             <div className={styles.wishlist_text}>WISHLIST</div>
+                             </div>
                         <div className={styles.sizes}>Sizes: {item.sizes.map((el, a) => a === item.sizes.length - 1 ? <span key={a}>{el}</span>  : <span key={el}>{`${el}, `}</span> )}</div>
                         {item.discount === 0 ? <div className={styles.price}>Rs. {item.price}</div> : <div className={styles.item_price_div}>
                             <div>Rs. {Math.floor(item.price * (100 - item.discount) / 100)}</div>
@@ -155,16 +159,18 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                     </div>
                     </div> </Link> )
             }
+            </div>
             <div className={styles.pagination_wrapper}>
                 <div>{`Page ${page} of ${pageArray.length}`}</div>
                 <div className={styles.sub_pagi_wrapper}>
-                <div className={page === 1 ? styles.visi_hidden : ""} onClick={() => setPage((prev) => prev - 1)}><span>{`<`}</span>  Previous</div>
+                <div className={page === 1 ? styles.visi_hidden : ""} onClick={() => setPage((prev) => prev - 1)}>  Previous</div>
                 <div className={styles.pagi_number}>
                 {pageArray.map((el) => <div className={page === el ? styles.bg_color : ""}  onClick={() => setPage(el)} key={el}>{el}</div> )}
                 </div>
-                <div onClick={() => setPage((prev) => prev + 1)}>Next  <span>{`>`}</span></div>
+                <div onClick={() => setPage((prev) => prev + 1)}>Next </div>
                 </div>
             </div>
+            </section>
         </div>
         </>
     )

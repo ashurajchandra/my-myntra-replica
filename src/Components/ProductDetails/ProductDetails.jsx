@@ -12,6 +12,7 @@ import { postWishData } from '../../Redux/Wishlist/action'
 import { postBagData } from '../../Redux/Bag/action'
 import Sizebutton from './Sizebutton'
 
+toast.configure()
 function ProductDetails() {
     const [data, setData]=React.useState({})
     const [loading, setLoading]=React.useState(true)
@@ -62,8 +63,8 @@ function ProductDetails() {
                    {(data.sizes).map((el,j)=><Sizebutton key={j} el={el}></Sizebutton>)}
                </div>
                <div className={styles.buttondiv}>
-                   <div onClick={()=>{dispatch(postBagData(data)); alert("Product added to Bag")}}  className={styles.PbuttonBag}> <img src="" alt="" />ADD TO BAG</div>
-                   <div onClick={()=>{dispatch(postWishData(data));alert("Product added to Wishlist")}} className={styles.pWhishlist}><img src="" alt="" />WISHLIST</div>
+                   <div onClick={()=>{dispatch(postBagData(data)); toast.success("Product added to Bag")}}  className={styles.PbuttonBag}> <img src="" alt="" />ADD TO BAG</div>
+                   <div onClick={()=>{dispatch(postWishData(data));toast.success("Product added to Wishlist")}} className={styles.pWhishlist}><img src="" alt="" />WISHLIST</div>
                </div>
                <div className={styles.repeatmrp}>
                <strong className={styles.Pprice}>₹{data.price}</strong>

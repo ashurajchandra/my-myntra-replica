@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-width: 400px){
+    .product_header{
+        display: none !important;
+    }
+    .product_header>div{
+        display: none !important;
+    }
+}
 .product_header{
     text-align: left;
     padding: 0px 0px 0px 10px;
@@ -9,8 +17,10 @@
 }
 
 .product_header > div {
-    display: grid;
-    grid-template-columns: 75% 25%;
+    /* display: grid;
+    grid-template-columns: 75% 25%; */
+    display: flex;
+    justify-content: space-around;
 }
 
 .product_header > div > div {
@@ -104,4 +114,18 @@
     margin-top: -2px;
     width: 30px;
     height: 25px;
+}
+
+/* For Tablet View */
+@media screen and (max-width: 900px){
+    .microSpecs{
+        display: none;
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-width: 400px){
+    .microSpecs{
+        display: none;
+    }
 }

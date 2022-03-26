@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import hamIcon from "./navimages/ham-icon.png";
 import userlogo from "./navimages/user.png";
 import wishlist from "./navimages/heart.png"
 import bag from "./navimages/shopping-bag.png"
@@ -10,7 +11,13 @@ function NavRight() {
     let navigate= useNavigate();
     const bagData = useSelector(state => state.bag.bagData)
     console.log(bagData.length)
+    const [showHamIcons, setShowHamIcons] = useState(false);
+
+    const handleDisplayProfile=()=>{
+        setShowHamIcons(!showHamIcons)
+    }
     return (
+        <>
         <div className={styles.userdiv}>
             <div>
             <h5><img className={styles.userlogo} src={userlogo} alt="" />
@@ -26,8 +33,39 @@ function NavRight() {
                 <br/>Bag</h5>
                 
             </div>
-
         </div>
+
+        <div className={styles.bars}>
+                <img src={hamIcon} alt="ham-icon" onClick={ handleDisplayProfile } />
+                {
+                    showHamIcons &&
+                    <div className={styles.showProfile}>
+                         <div>
+            <h5><img className={styles.userlogo} src={userlogo} alt="" />
+                <br/>Profile</h5>
+            </div>
+            <div onClick={()=>navigate("/wishlist")}> 
+            <h5><img className={styles.userlogo} src={wishlist} alt="" />
+               <br/> Wishlist</h5>
+            </div>
+            <div onClick={()=>navigate("/cart")}>
+            <h5><img className={styles.userlogo} src={bag} alt="" />
+                    <div className={styles.countnav}>{bagData.length}</div>
+                <br/>Bag</h5>
+                </div>
+                        {/* <div onClick={ () => this.handleShowWishlist() }>
+                            <div><FaHeart /></div>
+                            <div className={styles.title}>Wishlist</div>
+                        </div> */}
+                        {/* <div onClick={ () => this.handleShowBag() }>
+                            <div><FaShoppingBag /></div>
+                            <div className={styles.title}>Bag</div>
+                        </div> */}
+                    </div>
+                }
+            </div>
+
+        </>
     )
 }
 

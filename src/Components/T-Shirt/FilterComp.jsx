@@ -276,15 +276,26 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
   
 
 
-    return (
-        <div id={styles.main_wrapper} style={window.scrollY > 400 && window.scrollY < 800 ? {marginTop : "200px"} : window.scrollY >= 800 && window.scrollY < 1200 ? {marginTop : "400px"} : window.scrollY >= 1200 && window.scrollY < 1600 ? {marginTop : "600px"} : window.scrollY >= 1600 && window.scrollY < 2000 ? {marginTop : "800px"} : window.scrollY >= 2000 && window.scrollY < 2400 ? {marginTop : "1400px"} : window.scrollY >= 2400 && window.scrollY < 2800 ? {marginTop : "1800px"} : window.scrollY >= 2800 && window.scrollY < 3200 ? {marginTop : "2200px"} : window.scrollY >= 3200 && window.scrollY < 3600 ? {marginTop : "2400px"} : window.scrollY >= 3600 ? {marginTop : "2500px"} : {marginTop : "0px"}}>
+    return  (
+        <div id={styles.main_wrapper}
+        //  style={window.scrollY > 400 && window.scrollY < 800 ?
+        //   {marginTop : "200px"} : window.scrollY >= 800 && window.scrollY < 1200 ?
+        //    {marginTop : "400px"} : window.scrollY >= 1200 && window.scrollY < 1600 ?
+        //     {marginTop : "600px"} : window.scrollY >= 1600 && window.scrollY < 2000 ?
+        //      {marginTop : "800px"} : window.scrollY >= 2000 && window.scrollY < 2400 ?
+        //       {marginTop : "1400px"} : window.scrollY >= 2400 && window.scrollY < 2800 ?
+        //        {marginTop : "1800px"} : window.scrollY >= 2800 && window.scrollY < 3200 ? 
+        //        {marginTop : "2200px"} : window.scrollY >= 3200 && window.scrollY < 3600 ? 
+        //        {marginTop : "2400px"} : window.scrollY >= 3600 ? {marginTop : "2500px"} :
+        //         {marginTop : "0px"}}
+                >
             <div className={styles.category_wrapper}>
                 <div className={styles.filter_header}>CATEGORIES</div>
                 {
                     category.map((item, a) => <div key={item.id} className={styles.listing_div} onClick={() => handleToggleCheck(item.id)}>
                         <div className={item.ischecked === false ? styles.img_div : styles.img_div2}><img src={item.ischecked ? "https://i.imgur.com/2kY5gDz.png" : "https://i.imgur.com/YDWK16F.png"} alt="" className={styles.img} /></div>
                         <div className={styles.item_name}>{`${item.category_name} (${categories_length[a].length})`}</div>
-                        {/* <div className={styles.item_quantity}>{`(${item.length})`}</div> */}
+                        {/* {item.length>0 && <div className={styles.item_quantity}>{`(${item.length})`}</div>} */}
                     </div> )
                 }
             </div>
@@ -294,7 +305,7 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
                     brand.map((item, a) => <div key={item.id} className={styles.listing_div} onClick={() => handleToggleCheck(item.id)}>
                         <div className={item.ischecked === false ? styles.img_div : styles.img_div2}><img src={item.ischecked ? "https://i.imgur.com/2kY5gDz.png" : "https://i.imgur.com/YDWK16F.png"} alt="" className={styles.img} /></div>
                         <div className={styles.item_name}>{`${item.brand_name} (${brands_length[a].length})`}</div>
-                        {/* <div className={styles.item_quantity}>{`(${item.length})`}</div> */}
+                        {/* {item.length>0 && <div className={styles.item_quantity}>{`(${item.length})`}</div>} */}
                     </div> )
                 }
             </div>
@@ -304,7 +315,7 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
                     price.map((item, a) => <div key={item.id} className={styles.listing_div} onClick={() => handleToggleCheck(item.id)}>
                         <div className={item.ischecked === false ? styles.img_div : styles.img_div2}><img src={item.ischecked ? "https://i.imgur.com/2kY5gDz.png" : "https://i.imgur.com/YDWK16F.png"} alt="" className={styles.img} /></div>
                         <div className={styles.item_name}>{`${item.range_name} (${prices_length[a].length})`}</div>
-                        {/* <div className={styles.item_quantity}>{`(${item.length})`}</div> */}
+                       {/* {item.length>0 &&  <div className={styles.item_quantity}>{`(${item.length})`}</div>} */}
                     </div> )
                 }
             </div>
@@ -315,7 +326,7 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
                         <div className={item.ischecked === false ? styles.img_div : styles.img_div2}><img src={item.ischecked ? "https://i.imgur.com/2kY5gDz.png" : "https://i.imgur.com/YDWK16F.png"} alt="" className={styles.img} /></div>
                         <div style={{width:"16px", height:"16px", borderRadius:"50%", backgroundColor:item.color, border:"0.3px solid grey", marginTop:"1px"}}></div>
                         <div className={styles.item_name}>{`${item.color_name} (${colors_length[a].length})`}</div>
-                        {/* <div className={styles.item_quantity}>{`(${item.length})`}</div> */}
+                       {/* {item.length>0 &&  <div className={styles.item_quantity}>{`(${item.length})`}</div>} */}
                     </div> )
                 }
             </div>
@@ -325,7 +336,7 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
                     discount.map((item, a) => <div key={item.id} className={styles.listing_div3} onClick={() => handleToggleCheck(item.id)}>
                         <div className={item.ischecked === false ? styles.img_div : styles.img_div2} style={{marginTop:"2px", width:"22px", height:"22px"}}><img src={item.ischecked ? "https://i.imgur.com/vJsnaOY.png" : "https://i.imgur.com/HwMqW7Q.png"} alt="" className={styles.img} /></div>
                         <div className={styles.item_name} style={{fontSize:"15px"}}>{`${item.range_name}`}</div>
-                        {/* <div className={styles.item_quantity}>{`(${item.length})`}</div> */}
+                      {/* {item.length>0 &&  <div className={styles.item_quantity}>{`(${item.length})`}</div>} */}
                     </div> )
                 }
             </div>

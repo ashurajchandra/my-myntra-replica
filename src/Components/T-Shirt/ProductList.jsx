@@ -17,7 +17,7 @@ function ProductListHeader({handleHighToLow, handleLowToHigh, handleBetterDiscou
         <div>
             <div className={styles.product_header}>
                 <div>
-                    <div>
+                    <div className={styles.microSpecs}>
                         <select disabled><option>Bundles</option></select>
                         <select disabled><option>Country of Origin</option></select>
                         <select disabled><option>Size</option></select>

@@ -1,5 +1,5 @@
 .logodiv{
-    /* width: 5%; */
+    width: 5%;
     background-color: white;
     vertical-align: middle;
     cursor: pointer;
@@ -7,22 +7,22 @@
 .logo{
     width: 45px;
     padding-top: 18px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     background-color: white;
     vertical-align: middle;
 
 }
 .navbar{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     background-color: white;
     position: fixed;
-    /* height: 10.5vh; */
     top: 0;
     width: 100%;
-    z-index: 10;
-
+    z-index: 100;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
 }
 
 /* Navigation bar links */
@@ -32,25 +32,25 @@
     color:rgb(40,44,63) ;
     font-size: 13px;
 }
-.navLinks2{
+/* .navLinks2{
     text-decoration: none;
     color:rgb(40,44,63) ;
     font-size: 13.5px;
     margin-left: 20px;
     padding-left: 40px;
-}
-.navLinks2:hover{
+} */
+/* .navLinks2:hover{
     color:black ;
     font-weight: 600;
     font-size: 14px;
-}
-.navLinks3{
+} */
+/* .navLinks3{
     padding-left: 40px;
     text-decoration: none;
     color:rgb(243, 73, 101) ;
     font-size: 15px;
     margin-left: 20px;
-}
+} */
 /* .navLinks>h4{
   background-color: white;
 } */
@@ -58,13 +58,13 @@
 .categories{
     display: flex;
     justify-content: space-around;
-    flex-grow: 0.6;
+    flex-grow: 0.5;
     align-items: center;
     cursor: pointer;
 }
 /* searchBar */
 .navserach{
-    width: 32%;
+    flex-grow: 0.3;
     background-color: white;
     margin-left: 0%;
 }
@@ -90,6 +90,69 @@
     background-color: whitesmoke;
 }
 
+
+.dataResult {
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  .dataResult::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .dataResult .dataItem {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  
+  .dataItem p {
+    margin-left: 10px;
+  }
+  .searchResults {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    top: 42px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 100;
+  }
+  .searchResult .movieInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .searchResult .movieInfo button {
+    margin: 20px 10px;
+    background: #21ba45;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    padding: 9px 0;
+    border-radius: 4px;
+  }
+  .searchResult {
+    display: flex;
+  }
+  .searchResult img {
+    height: 150px;
+  }
+  .searchResult > div span {
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 600;
+  }
 /* userbar */
 
 .userlogo{
@@ -99,12 +162,13 @@
     cursor: pointer;
 }
 .userdiv{
-    display:  flex;
-    width: 15%;
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: white;
     cursor: pointer;
+    flex-grow: 0.1;
+    padding-right: 30px;
 }
 .userdiv > div {
     background-color: white;
@@ -122,11 +186,11 @@
 
 /* Hover Links */
 
-.hoverdiv{
+/* .hoverdiv{
     width: 25%;
     background-color: rgb(243, 73, 101);
     background-color: pi;
-}
+} */
 .countnav{
     width: 17px;
     height: px;
@@ -140,4 +204,43 @@
     border-radius: 50%;
     color: white ;
     background-color: rgb(243, 73, 101);
+}
+.bars{
+  display: none;
+}
+/* For Tablet View */
+@media screen and (max-width: 900px)
+ {
+.categories{
+  display: none;
+}
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-width: 400px){
+  .navbar{
+    /* width: 100%; */
+  }
+  /* .userdiv{
+    display: none;
+  } */
+ .bars{
+      /* width: 9%; */
+      /* height: 20%; */
+      /* display: flex !important;
+      flex-direction: column;
+      align-self: center;
+      position: relative; */
+  }
+  /* .countnav{
+    top: 184px;
+    left: 348px;
+  } */
+  /* .showProfile{
+    position: absolute;
+    top: 43px;
+    background-color: grey;
+    width: 200px;
+    right: -29px;
+  } */
 }

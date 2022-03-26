@@ -146,11 +146,11 @@
     border-top: 2px solid #282c3f;
     border-bottom: 2px solid #282c3f;
 }
-.delivery{
+/* .delivery{
     margin-top: 6vh;
     border-bottom: 2px solid #282c3f;
     font-size: 16px;
-}
+} */
 .SizeDiv{
     display: flex;
     flex-direction: row;

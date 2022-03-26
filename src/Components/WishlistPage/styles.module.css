@@ -8,7 +8,7 @@
     margin-top: 95px;
 }
 
-.subNav {
+/* .subNav {
     background-color: #03A685;
     padding: 3px;
     color: #FFFFFF;
@@ -19,7 +19,7 @@
     top: 0;
     margin-top: 79px;
     z-index: 100;
-}
+} */
 
 .heading {
     font-size: 20px;
@@ -156,10 +156,10 @@
 .font16 {
     font-size: 17px;
 }
-
+/* 
 .gray {
     color: rgb(155, 152, 152);
-}
+} */
 
 .sizeDiv {
     width: 40px;
@@ -248,14 +248,12 @@
     margin-top: -7px;
 }
 
-.deleteDiv {
+/* .deleteDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* grid-template-columns: 13% auto; */
     width: 290px;
     height: 40px;
-    /* background-color: red; */
     border: 4px solid black;
     font-weight: bold;
     position: fixed;
@@ -267,29 +265,25 @@
     border-radius: 6px;
     color: white;
     font-size: 10px;
-    /* transform:rotate(0.25turn) */
-}
+} */
 
-.modelStyle {
+/* .modelStyle {
     margin-top: 3px;
     font-size: 20px;
     color: black;
-}
+} */
 
-.marginTop {
+/* .marginTop {
     margin-top: 6px;
-}
+} */
 
-.withoutSizeDiv {
-    /* display: grid;
-    grid-template-columns: 27% auto; */
+/* .withoutSizeDiv {
     display: flex;
     flex-direction: row;
     border: 4px solid black;
     justify-content: space-around;
     width: 240px;
     height: 40px;
-    /* background-color: #FE1118; */
     font-weight: bold;
     position: fixed;
     top: 0;
@@ -298,24 +292,20 @@
     right: 627px;
     padding: 7px;
     border-radius: 6px; 
-    /* color: white; */
     font-size: 17px;
-}
+} */
 
-.borderRadius img {
+/* .borderRadius img {
     border-radius: 50%;
-}
+} */
 
-.movedToBagDiv {
-    /* display: grid;
-    grid-template-columns: 10% auto 25%; */
+/* .movedToBagDiv {
     display: flex;
     flex-direction: row;
     border: 4px solid black;
     justify-content: space-around;
     width: 370px;
     height: 40px;
-    /* background-color: black; */
     font-weight: bold;
     position: fixed;
     top: 0;
@@ -324,11 +314,10 @@
     right: 50px;
     padding: 10px;
     border-radius: 6px;
-    /* color: white; */
     font-size: 17px;
-}
+} */
 
-.viewBagBtn {
+/* .viewBagBtn {
     padding: 3px 8px;
     background-color: teal;
     border: none;
@@ -336,11 +325,11 @@
     border-radius: 5px;
     font-weight: bold;
     margin-top: 5px;
-}
+} */
 
-.seller {
+/* .seller {
     font-size: 16px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 10px;
-}
+} */
