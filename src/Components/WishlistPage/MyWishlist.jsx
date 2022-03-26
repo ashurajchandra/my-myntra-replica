@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styles from "./styles.module.css"
 import { useDispatch, useSelector } from "react-redux";
-import { deleteWishData, getWishData, patchWishData, patchWishEmptySize } from '../../Redux/Wishlist/action';
-import errorIcon from "./images/errorIcon.jpg";
+import { deleteWishData, getWishData} from '../../Redux/Wishlist/action';
 import { postBagData } from '../../Redux/Bag/action';
 import Footer from "../Footer/Footer.jsx";
 import { Link } from "react-router-dom";
-
+toast.configure()
 const MyWishlist = () => {
 
     const [wishlistModel, setWishlistModel] = useState(false)
@@ -21,14 +21,8 @@ const MyWishlist = () => {
     const [isSame, setIsSame] = useState("")
 
     const wishlistData = useSelector(state=>state.wishlist.wishlistData)
-    // const bagData = useSelector(state=>state.bag.bagData)
 
     const dispatch = useDispatch()
-
-    // const handleWishlist = (idx) => {
-    //     const updatedWishlist = filterData.filter(el=> el.id===idx )
-    //     dispatch( postWishData(updatedWishlist[0]) )
-    // }
 
     const handleDeleteWishlist = (idx) => {
         const deletedProduct = wishlistData.filter(item=>item.id===idx )
@@ -36,7 +30,6 @@ const MyWishlist = () => {
         dispatch( deleteWishData(idx) )
         setIsDeleted(true)
     }
-    // console.log(delProduct);
 
     const handleModelWishlist = (idx) => {
         setWishlistModel(true)
@@ -48,7 +41,6 @@ const MyWishlist = () => {
         setWishlistModel(false)
         setIsSizeSelected(false)
         setIsSame("")
-        dispatch( patchWishEmptySize(idx) )
     }
 
     const handleModelWishRetain = () => {
@@ -62,13 +54,11 @@ const MyWishlist = () => {
     const handleSizeSelect = (idx, sizex) => {
       setIsSizeSelected(true)
       setIsSame(sizex)
-      // console.log(idx, sizex);
-      dispatch( patchWishData(idx, sizex) )
     }
 
-    // const handleDoneWithSize = () => {
-    //   setIsSizeSelected(true)
-    // }
+    const handleDoneWithSize = () => {
+      setIsSizeSelected(true)
+    }
     
     const handleMoveToBag = (idx) => {
       const deletedProduct = wishlistData.filter(item=>item.id===idx )
@@ -106,26 +96,12 @@ const MyWishlist = () => {
         }
     }, [dispatch, isDeleted, isSizeNotSelected, isMovedToBag])
 
-    // console.log(wishlistData);
-    // console.log(bagData);
-    // console.log(isSizeNotSelected);
-    // console.log(isSizeSelected);
-    // console.log(wishlistModel);
-    // console.log(wishlistModelArray);
-    // console.log(isSame);
-
-
     return <> 
 
         <div> {wishlistData.length!==0 ? (
         <div>
             <br />
             <div className={styles.heading}>My Wishlist <span className={styles.countFont} > {wishlistData.length} items</span> </div>
-
-            {/* { filterData.map((item,i)=> 
-            <button onClick={()=>handleWishlist(item.id)}>wishCheck{item.id}</button>
-            ) } */}
-
             <div className={styles.cardCont}>
                 { wishlistData.map((e,i) => 
                     <div key={i} className={styles.card}> 
@@ -161,36 +137,13 @@ const MyWishlist = () => {
         </div>
           )}
         </div>
-
-        {/* <SubNavbar /> */}
-
-        { isDeleted && 
-          <div className={ `${styles.deleteDiv}`} >
-            <div>
-              <img src={delProduct.images[0]} alt="" height="40px" />
-            </div>
-            <div className={styles.modelStyle}>Item removed from wishlist</div>
-          </div> 
+        { isDeleted &&  toast.success("Item removed from wishlist")
         }
 
-        { isSizeNotSelected && 
-          <div className={ `${styles.withoutSizeDiv}`} >
-            <div className= {`${styles.borderRadius} ${styles.marginTop}`}>
-              <img src={errorIcon} alt="" height="26px" />
-            </div>
-            <div className= {`${styles.marginTop} ${styles.align}`}>Size not selected</div>
-          </div> 
+        { isSizeNotSelected &&  toast.error("Size not selected")
         }
 
-        { isMovedToBag && 
-          <div className={ `${styles.movedToBagDiv}`} >
-            <div>
-              <img src={delProduct.images[0]} alt="" height="40px" />
-            </div>
-            <div className={styles.marginTop}>Item successfully added to bag</div>
-
-            <div> <Link to="/cart"><button className={styles.viewBagBtn}>VIEW BAG</button></Link> </div>
-          </div> 
+        { isMovedToBag  && toast.success("Item removed from wishlist") 
         }
                 
         <div>

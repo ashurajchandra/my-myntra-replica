@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import styles from "./Product.module.css"
-// import SubNavbar from "../WishlistPage/SubNavbar"
 import { useDispatch } from 'react-redux'
 import { postWishData } from '../../Redux/Wishlist/action'
 import { postBagData } from '../../Redux/Bag/action'
@@ -30,11 +29,9 @@ function ProductDetails() {
         getProductDetails(id)
     },[])
   
-    // console.log(data)
 
     return (loading)?<>loading</>: (
         <div className={styles.Pmaindiv}>
-            {/* <SubNavbar/> */}
           
            <div className={styles.Psubdiv} >
                 <div className={styles.Pimagesubdiv} >
@@ -65,7 +62,7 @@ function ProductDetails() {
                    {(data.sizes).map((el,j)=><Sizebutton key={j} el={el}></Sizebutton>)}
                </div>
                <div className={styles.buttondiv}>
-                   <div onClick={()=>{dispatch(postBagData(data)); toast.success("Product added to Bag")}}  className={styles.PbuttonBag}> <img src="" alt="" />ADD TO BAG</div>
+                   <div onClick={()=>{dispatch(postBagData(data)); alert("Product added to Bag")}}  className={styles.PbuttonBag}> <img src="" alt="" />ADD TO BAG</div>
                    <div onClick={()=>{dispatch(postWishData(data));alert("Product added to Wishlist")}} className={styles.pWhishlist}><img src="" alt="" />WISHLIST</div>
                </div>
                <div className={styles.repeatmrp}>
@@ -73,18 +70,6 @@ function ProductDetails() {
                    <s className={styles.Pdiscount}>₹{data.dis_price}</s>
                    <strong className={styles.Poffer} >({data.discount}%OFF)</strong>
                </div>
-               {/* <div className={styles.delivery}>
-                <p>100% Original Products</p>
-                <p>Pay on delivery might be available</p>
-                <p>Easy 30 days returns and exchanges</p>
-                <p>Try & Buy might be available</p>
-               </div> */}
-               {/* <div className={styles.delivery}>
-                <p>Applicable on: Orders above Rs.1699</p>
-                <p>Coupon code: FORU300</p>
-                <p>Expires in: 3 hours 40 minutes</p>
-                <p>Coupon Discount: Rs. 300 off (check cart for final savings)</p>
-               </div> */}
            </div>
           
          </div>
