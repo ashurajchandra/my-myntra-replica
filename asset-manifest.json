@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ashurajchandra/my-myntra-replica.git/static/css/main.e86ba7e1.css",
-    "main.js": "/ashurajchandra/my-myntra-replica.git/static/js/main.5e44cae8.js",
+    "main.js": "/ashurajchandra/my-myntra-replica.git/static/js/main.404f12cf.js",
     "static/media/googlePlay.png": "/ashurajchandra/my-myntra-replica.git/static/media/googlePlay.4a2b303082ac9742b7ba.png",
     "static/media/AppStore.png": "/ashurajchandra/my-myntra-replica.git/static/media/AppStore.29f7614084c790d5287d.png",
     "static/media/Guarantee.png": "/ashurajchandra/my-myntra-replica.git/static/media/Guarantee.aa8d99cf35367e4df5d9.png",
@@ -11,10 +11,10 @@
     "static/media/user.png": "/ashurajchandra/my-myntra-replica.git/static/media/user.cb673a746f17b4a062b8.png",
     "index.html": "/ashurajchandra/my-myntra-replica.git/index.html",
     "main.e86ba7e1.css.map": "/ashurajchandra/my-myntra-replica.git/static/css/main.e86ba7e1.css.map",
-    "main.5e44cae8.js.map": "/ashurajchandra/my-myntra-replica.git/static/js/main.5e44cae8.js.map"
+    "main.404f12cf.js.map": "/ashurajchandra/my-myntra-replica.git/static/js/main.404f12cf.js.map"
   },
   "entrypoints": [
     "static/css/main.e86ba7e1.css",
-    "static/js/main.5e44cae8.js"
+    "static/js/main.404f12cf.js"
   ]
 }
