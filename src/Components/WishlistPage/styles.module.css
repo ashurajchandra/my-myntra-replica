@@ -32,10 +32,13 @@
 
 .cardCont {
     /* border: 1px solid red; */
-    padding: 40px 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 7%;
     /* width: 230px; */
-    display: grid;
-    grid-template-columns: 21% 21% 21% 21% 21%;
+    /* display: grid;
+    grid-template-columns: 21% 21% 21% 21% 21%; */
 }
 
 .card {
@@ -333,3 +336,20 @@
     text-align: left;
     margin-bottom: 10px;
 } */
+  /* For Mobile Phones Portrait or Landscape View */
+  @media screen and (max-width: 400px){
+    .buttons  {
+        width: 100%;
+      }
+      .card {
+        width: 100%;
+      }
+      .cancelIcon{
+        margin-left: 0;
+        margin-top: 0;
+        /* top: 447px;
+        left: 195px; */
+        top: 244px;
+        left: 332px;
+      }
+  }
