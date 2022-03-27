@@ -96,9 +96,9 @@ const MyWishlist = () => {
         }
     }, [dispatch, isDeleted, isSizeNotSelected, isMovedToBag])
 
-    return <> 
+    return( <> 
 
-        <div> {wishlistData.length!==0 ? (
+        <div> {wishlistData.length===0?<h4>Loading...</h4>: wishlistData.length!==0 ? (
         <div>
             <br />
             <div className={styles.heading}>My Wishlist <span className={styles.countFont} > {wishlistData.length} items</span> </div>
@@ -190,6 +190,7 @@ const MyWishlist = () => {
           </div>
         </div>
   </>
+    )
 };
 
 export default MyWishlist;
