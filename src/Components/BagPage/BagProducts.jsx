@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import 'react-medium-image-zoom/dist/styles.css'
-import {  toast } from 'react-toastify';
+import { toast  } from 'react-toastify';
 import { deleteBagData, getBagData} from '../../Redux/Bag/action';
 import styles from "./bag.module.css";
 import wishStyles from "../WishlistPage/styles.module.css";
@@ -31,13 +31,15 @@ const BagProducts = () => {
     
     const handleDeleteFromBag = (idx) => {
         setBagModel(false)
-        toast.success("Item Removed from Bag")
+        toast.success("Item Removed from Bag" ,{toastId: 'success1',
+    })
         dispatch( deleteBagData(idx) )
     }
 
     const handleMoveToWishlist = (idx) => {
         dispatch( deleteBagData(idx) )
-        toast.success("Item moved to wishlist")
+        toast.success("Item moved to wishlist",{toastId: 'success2',
+    })
 
         const updatedWishlist = bagData.filter(el=> el.id===idx )
         dispatch( postWishData(updatedWishlist[0]) )

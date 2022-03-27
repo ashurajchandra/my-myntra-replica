@@ -135,13 +135,13 @@ const MyWishlist = () => {
         </div>
           )}
         </div>
-        { isDeleted &&  toast.success("Item removed from wishlist")
+        { isDeleted &&  toast.success("Item removed from wishlist",{toastId: 'success3',})
         }
 
-        { isSizeNotSelected &&  toast.error("Size not selected")
+        { isSizeNotSelected &&  toast.error("Size not selected",{toastId: 'error1',})
         }
 
-        { isMovedToBag  && toast.success("Item removed from wishlist") 
+        { isMovedToBag  && toast.success("Item removed from wishlist",{toastId: 'success4',}) 
         }
                 
         <div>

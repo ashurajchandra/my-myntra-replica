@@ -3,7 +3,7 @@
 
 # Tech stack used in this project is : reactjs, redux for state management, 
 # used mock api to get the data of products
-# In Navbar search box we are searching over the list of products and showing it to user
+# In Navbar search box we are searching over the list of products and showing it to user and on clicking on more info button user can visit to detail page
 
 # Dropdown on mouse over has list of items on which we can filter and show     different data based on filter selected
 
