@@ -14,9 +14,7 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
     const {data, filterData} = useSelector((state) => state.products)
     const [page, setPage] = useState(1);
     let [color, setColor] = useState("#ffffff");
-    // const [filtersData, setFiltersData] = useState([]);
-    // const [dots, setDots] = useState(0);
-    // console.log("data in home",data)
+
 
     const handleAddDataToWishlist = (id) => {
         const wishListItem = filterData.filter(el => el.id === id) 
@@ -34,7 +32,6 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
         pageArray.push(i + 1)
     }
 
-    // console.log(pageArray);
 
     useEffect(() => {
         dispatch(getData());
@@ -53,19 +50,7 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
             }
         
 
-                // if(filtersData.length > 0) {
-                //     const filtersData = data.filter((item) => item.brand === brandFilter[0])
-                //     dispatch(setFilterData(filtersData))
-                // }
 
-        // if(brandFilter.length === 1 && colorFilter.length === 0 && discountFilter.length === 0) {
-        //     dispatch((getDataFilterByBrand1(page, brandFilter)));
-        // }
-
-        // if(brandFilter.length === 2 && colorFilter.length === 0 && discountFilter.length === 0) {
-        //     dispatch((getDataFilterByBrand2(page, brandFilter)));
-        // }
-        
         if(type === true && sort === "") {
             dispatch(getDataFilterByType(page));
         }
@@ -74,28 +59,14 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
 
 
     const handleChangeDots = (id) => {
-
-        // setInterval(() => {
-        //    const updatedFilterData = filterData.map(item => item.id === id ? item.isdotvalue === 4 ? {...item, isdotvalue : 0} : {...item, isdotvalue : item.isdotvalue + 1} : item)
-        //    dispatch(updateData(updatedFilterData));
-        // }, 5000);
-
         setTimeout(() => {
             const updatedFilterData = filterData.map(item => item.id === id ? item.isdotvalue >= 3 ? {...item, isdotvalue : 0} : {...item, isdotvalue : item.isdotvalue + 1} : item)
            dispatch(updateData(updatedFilterData));
         }, 1000);
-        // if(dots < 4) {
-        //     // setInterval(() => {
-        //     //     setDots(dots + 1)
-        //     // }, 3000);
-        // } else {
-        //     setDots(0);
-        // }
     }
 
     
     const handleResetDots = (id, event) => {
-        // e.stopPropogation()
             const updateFilterData = filterData.map(item => item.id === id ? {...item, isdotvalue : 0} : item)
             dispatch(updateData(updateFilterData));
     }
@@ -118,12 +89,7 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                             <img  alt="" src={item.images[2]} className={styles.item_image}/>
                             <img  alt="" src={item.images[3]} className={styles.item_image}/>
                         </Carousel>
-                    {
-                    // (item.type === "NEW" ||  item.type === "TRENDING") && 
-                    // <div className={styles.tag_wrapper}>
-                    //     {/* <img src={tagImage} alt="" />  */}
-                    //     <div>{item.type}</div></div>
-                        }
+             
                     {item.rating !== "" && <div className={styles.rating_wrapper}><div>{item.rating}</div><div className={styles.rating_image}><img src="https://i.imgur.com/qXeipEM.png" alt=""  style={{width:"100%"}}/></div><div>{`| ${item.review} `}</div></div> }
                     </div>
                     <div className={styles.non_hover_div}>
@@ -138,10 +104,6 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                     </div>
                     <div className={styles.hover_div}>
                         <div className={styles.dots}>
-                            {/* <div className={styles.dots_div}></div>
-                            <div className={styles.dots_div}></div>
-                            <div className={styles.dots_div}></div>
-                            <div className={styles.dots_div}></div> */}
                             {
                                 dotsArray.map(el => <div className={ item.isdotvalue === el ? styles.dots_div2 : styles.dots_div} key={el}></div> )
                             }
@@ -159,16 +121,6 @@ function ProductListComp({sort, order, type, categoryFilters, brandFilter, price
                     </div>
                     </div> </Link> )
             }
-            </div>
-            <div className={styles.pagination_wrapper}>
-                <div>{`Page ${page} of ${pageArray.length}`}</div>
-                <div className={styles.sub_pagi_wrapper}>
-                <div className={page === 1 ? styles.visi_hidden : ""} onClick={() => setPage((prev) => prev - 1)}>  Previous</div>
-                <div className={styles.pagi_number}>
-                {pageArray.map((el) => <div className={page === el ? styles.bg_color : ""}  onClick={() => setPage(el)} key={el}>{el}</div> )}
-                </div>
-                <div onClick={() => setPage((prev) => prev + 1)}>Next </div>
-                </div>
             </div>
             </section>
         </div>

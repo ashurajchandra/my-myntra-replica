@@ -58,41 +58,38 @@ export const deleteBagFailure = (err) => {
     }
 }
 
-export const postBagData = payload => dispatch => {
+export const postBagData = payload => async dispatch => {
     dispatch( postBagRequest() )
 
-    return axios.post("https://masai-project.herokuapp.com/bag", payload )
-    .then(res => {
-        dispatch( postBagSuccess() )
-        dispatch( getBagData() )
-    })
-    .catch(err=> {
-        dispatch( postBagFailure() )
-    })
+    try {
+        const res = await axios.post("https://masai-project.herokuapp.com/bag", payload);
+        dispatch(postBagSuccess());
+        dispatch(getBagData());
+    } catch (err) {
+        dispatch(postBagFailure());
+    }
 }
 
 
-export const deleteBagData = (idx) => dispatch => {
+export const deleteBagData = (idx) => async dispatch => {
     dispatch( deleteBagRequest() )
 
-    return axios.delete(`https://masai-project.herokuapp.com/bag/${idx}` )
-    .then(res => {
-        dispatch( deleteBagSuccess() )
-        dispatch( getBagData() )
-    })
-    .catch(err=> {
-        dispatch( deleteBagFailure() )
-    })
+    try {
+        const res = await axios.delete(`https://masai-project.herokuapp.com/bag/${idx}`);
+        dispatch(deleteBagSuccess());
+        dispatch(getBagData());
+    } catch (err) {
+        dispatch(deleteBagFailure());
+    }
 }
 
-export const getBagData = payload => dispatch => {
+export const getBagData = payload => async dispatch => {
     dispatch( getBagRequest() )
 
-    return axios.get("https://masai-project.herokuapp.com/bag", payload )
-    .then(res => {
-        dispatch( getBagSuccess(res.data) )
-    })
-    .catch(err=> {
-        dispatch( getBagFailure() )
-    })
+    try {
+        const res = await axios.get("https://masai-project.herokuapp.com/bag", payload);
+        dispatch(getBagSuccess(res.data));
+    } catch (err) {
+        dispatch(getBagFailure());
+    }
 }

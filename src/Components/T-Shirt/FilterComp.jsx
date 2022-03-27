@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect } from "react";
-// import { useRef } from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./FilterComp.module.css";
@@ -62,8 +61,6 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
     const red = data.filter(item => item.color === "red");
     const orange = data.filter(item => item.color === "orange");
 
-    // console.log(HRX.length);
-    // console.log(range_3053_to_5932.length);
     const categories = [
         {id : 1, category_name : "T-shirt",  ischecked : false},
         {id : 2, category_name : "Lounge Tshirt", ischecked : false}
@@ -274,7 +271,19 @@ function FilterComp({handleCategoryFilters, handleBrandFilter, handlePriceFilter
         handleAddDiscountFilters();
     }, [discount])
   
+// useEffect(()=>{
+//     let mainWrapper = document.querySelector("main_wrapper");
 
+//     mainWrapper.on("scroll", function(e) {
+        
+//       if (window.scrollY > 147) {
+//         mainWrapper.addClass("fix-search");
+//       } else {
+//         mainWrapper.removeClass("fix-search");
+//       }
+      
+//     });
+// },[window.scrollY])
 
     return  (
         <div id={styles.main_wrapper}

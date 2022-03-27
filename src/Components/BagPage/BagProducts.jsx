@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import 'react-medium-image-zoom/dist/styles.css'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import { deleteBagData, getBagData} from '../../Redux/Bag/action';
 import styles from "./bag.module.css";
 import wishStyles from "../WishlistPage/styles.module.css";

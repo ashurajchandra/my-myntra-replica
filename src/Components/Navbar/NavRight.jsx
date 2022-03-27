@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux';
 function NavRight() {
     let navigate= useNavigate();
     const bagData = useSelector(state => state.bag.bagData)
-    console.log(bagData.length)
     const [showHamIcons, setShowHamIcons] = useState(false);
 
     const handleDisplayProfile=()=>{
@@ -53,14 +52,6 @@ function NavRight() {
                     <div className={styles.countnav}>{bagData.length}</div>
                 <br/>Bag</h5>
                 </div>
-                        {/* <div onClick={ () => this.handleShowWishlist() }>
-                            <div><FaHeart /></div>
-                            <div className={styles.title}>Wishlist</div>
-                        </div> */}
-                        {/* <div onClick={ () => this.handleShowBag() }>
-                            <div><FaShoppingBag /></div>
-                            <div className={styles.title}>Bag</div>
-                        </div> */}
                     </div>
                 }
             </div>

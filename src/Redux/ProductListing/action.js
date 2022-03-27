@@ -49,7 +49,7 @@ const setFilterData = (payload) => {
 }
 
 
-const getData = (payload) => (dispatch) => {
+const getData =(payload) => async (dispatch) => {
     dispatch(getDataRequest())
 
     const config = {
@@ -57,17 +57,16 @@ const getData = (payload) => (dispatch) => {
         method : "get",
     }
 
-    return axios(config)
-    .then((res) => {
+    try {
+        const res = await axios(config)
         dispatch(getDataSuccess(res.data))
-        // console.log(res.data)
-    })
-    .catch((err) => {
-        dispatch(getDataFailure(err));
-    })
+    } catch (err) {
+        dispatch(getDataFailure(err))
+    }
 }
 
-const getDataFilterBySort = (page, sort, order) => (dispatch) => {
+
+const getDataFilterBySort = (page, sort, order) => async (dispatch) => {
     dispatch(getDataRequest())
 
     const config = {
@@ -81,66 +80,62 @@ const getDataFilterBySort = (page, sort, order) => (dispatch) => {
         }
     }
 
-    return axios(config)
-    .then((res) => {
+    try {
+        const res = await axios(config)
         dispatch(getDataFilterSuccess(res.data))
-        // console.log(res.data)
-    })
-    .catch((err) => {
+    } catch (err) {
         dispatch(getDataFailure(err))
-    })
+    }
 }
 
-// const getDataFilterByBrand1 = (page, brand) => (dispatch) => {
-//     dispatch(getDataRequest())
+const getDataFilterByBrand1 = (page, brand) => async (dispatch) => {
+    dispatch(getDataRequest())
 
-//     const config = {
-//         url:"/product_data",
-//         method : "get",
-//         params : {
-//             _page : page,
-//             _limit : 50,
-//             brand : brand[0]
-//         }
-//     }
+    const config = {
+        url:"/product_data",
+        method : "get",
+        params : {
+            _page : page,
+            _limit : 50,
+            brand : brand[0]
+        }
+    }
 
-//     return axios(config)
-//     .then((res) => {
-//         dispatch(getDataFilterSuccess(res.data))
-//         console.log(res.data)
-//     })
-//     .catch((err) => {
-//         dispatch(getDataFailure(err))
-//     })
-// }
+    try {
+        const res = await axios(config)
+        dispatch(getDataFilterSuccess(res.data))
+        console.log(res.data)
+    } catch (err) {
+        dispatch(getDataFailure(err))
+    }
+}
 
 
-// const getDataFilterByBrand2 = (page, brand) => (dispatch) => {
-//     dispatch(getDataRequest())
+const getDataFilterByBrand2 = (page, brand) => async (dispatch) => {
+    dispatch(getDataRequest())
 
-//     const config = {
-//         url:"/product_data",
-//         method : "get",
-//         params : {
-//             _page : page,
-//             _limit : 50,
-//             brand_like : brand[0] & brand[1]
-//         }
-//     }
+    const config = {
+        url:"/product_data",
+        method : "get",
+        params : {
+            _page : page,
+            _limit : 50,
+            brand_like : brand[0] & brand[1]
+        }
+    }
 
-//     return axios(config)
-//     .then((res) => {
-//         dispatch(getDataFilterSuccess(res.data))
-//         console.log(res.data)
-//     })
-//     .catch((err) => {
-//         dispatch(getDataFailure(err))
-//     })
-// }
+    try {
+        const res = await axios(config)
+        dispatch(getDataFilterSuccess(res.data))
+        console.log(res.data)
+    } catch (err) {
+        dispatch(getDataFailure(err))
+    }
+}
 
 
 
-const getDataFilterByType = (page) => (dispatch) => {
+const getDataFilterByType = (page) => async (dispatch) => {
     dispatch(getDataRequest())
 
     const config = {
@@ -154,14 +149,12 @@ const getDataFilterByType = (page) => (dispatch) => {
         }
     }
 
-    return axios(config)
-    .then((res) => {
+    try {
+        const res = await axios(config)
         dispatch(getDataFilterSuccess(res.data))
-        // console.log(res.data)
-    })
-    .catch((err) => {
+    } catch (err) {
         dispatch(getDataFailure(err))
-    })
+    }
 }
 
 

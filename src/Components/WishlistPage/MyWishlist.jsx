@@ -6,7 +6,6 @@ import styles from "./styles.module.css"
 import { useDispatch, useSelector } from "react-redux";
 import { deleteWishData, getWishData} from '../../Redux/Wishlist/action';
 import { postBagData } from '../../Redux/Bag/action';
-import Footer from "../Footer/Footer.jsx";
 import { Link } from "react-router-dom";
 toast.configure()
 const MyWishlist = () => {
@@ -124,7 +123,6 @@ const MyWishlist = () => {
                     </div>
                 ) }
             </div>
-            <Footer />
         </div>
         ) : (
         <div>

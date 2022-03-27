@@ -8,9 +8,6 @@ function FilterHeader({allFilters}) {
             <div className={styles.filter_header}>
                 FILTERS
             </div>
-            {/* { allFilters.length > 0 ? <div className={styles.clearall}>
-                CLEAR ALL
-            </div> : ""} */}
         </div>
     )
 }

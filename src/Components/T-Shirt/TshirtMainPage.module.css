@@ -2,28 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-/* #note_div{
-    font-size: 14px;
-    font-weight: 700;
-    font-family: 'Catamaran', sans-serif;
-    background-color: #03A685;
-    width: 100%;
-    padding: 4px 0 4px 0px;
-    color: white;
-} */
 
 #wrapper {
     border: 0px solid blue;
     background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
-    /* display: grid;
-    grid-template-columns: 17% 83%; */
     box-sizing: border-box;
-    /* position: absolute; */
     width: 98%;
-    /* top: 0;
-    margin-top: 110px; */
 }
 
 #wrapper > div {
@@ -34,11 +20,8 @@
 
 #wrapper2 {
     background-color: #FFFFFF;
-    /* display: grid;
-    grid-template-columns: 17% 83%; */
     display: flex;
     box-sizing: border-box;
-    /* margin-top: 62px; */
 }
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-width: 400px){

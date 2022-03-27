@@ -17,8 +17,6 @@
 }
 
 .product_header > div {
-    /* display: grid;
-    grid-template-columns: 75% 25%; */
     display: flex;
     justify-content: space-around;
 }

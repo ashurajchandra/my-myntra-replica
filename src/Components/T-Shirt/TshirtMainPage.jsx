@@ -20,21 +20,9 @@ function TShirtMainPage() {
     const [discountFilter, setDiscountFilter] = useState([]);
     const [allFilters, setAllFilters] = useState([]);
 
-    // console.log(categoryFilters);
-    // console.log(brandFilter);
-    // console.log(priceFilter);
-    // console.log(colorFilter);
-    // console.log(discountFilter);
-    // console.log(allFilters);
-
     const handleCategoryFilters = (item) => {
         categoryFilters.length === 0 ? setCategoryFilters([...categoryFilters, item]) : categoryFilters.map((el) => el !== item ? setCategoryFilters([...categoryFilters, item]) : setCategoryFilters([...categoryFilters]));
     }
-
-    // const handleRemoveCategory = (item) => {
-    //    const updatedCategory = categoryFilters.filter((el) => el !== item)
-    //    setCategoryFilters(updatedCategory)
-    // }
 
     const handleBrandFilter = (item) => {
         brandFilter.length === 0 ? setBrandFilter([...brandFilter, item]) : brandFilter.map((el) => el !== item ? setBrandFilter([...brandFilter, item]) : setBrandFilter([...brandFilter]));
@@ -87,9 +75,6 @@ function TShirtMainPage() {
 
     return (
         <div>
-            {/* <div id={styles.note_div}>
-                - As per guidelines, we are only delivering essentials in govt-specified pincodes -
-            </div> */}
                 <Header />
             <div id={styles.wrapper}>
                 <Filter allFilters={allFilters}/>

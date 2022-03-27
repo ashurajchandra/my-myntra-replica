@@ -3,7 +3,7 @@ import React from 'react'
 import { useParams } from 'react-router'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import styles from "./Product.module.css"
@@ -28,7 +28,7 @@ function ProductDetails() {
     }
     React.useEffect(()=>{
         getProductDetails(id)
-    },[])
+    },[id])
   
 
     return (loading)?<>loading</>: (
@@ -39,7 +39,7 @@ function ProductDetails() {
                     <Zoom>
                     <img className={styles.Pimg1} src={data.images[0]} alt="prod-img" width="500" />
                     </Zoom>
-                  <Zoom> <img className={styles.Pimg1} src={data.images[1]}  /></Zoom>
+                  <Zoom> <img className={styles.Pimg1} src={data.images[1]} alt="prod-img"  /></Zoom>
                    
                </div>
                <div className={styles.Pimagesubdiv}>

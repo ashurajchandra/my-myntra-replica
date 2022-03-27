@@ -59,41 +59,38 @@ export const deleteWishFailure = (err) => {
 }
 
 
-export const postWishData = payload => dispatch => {
+export const postWishData = payload => async dispatch => {
     dispatch( postWishRequest() )
 
-    return axios.post("https://masai-project.herokuapp.com/wihlist", payload )
-    .then(res => {
-        dispatch( postWishSuccess() )
-        dispatch( getWishData() )
-    })
-    .catch(err=> {
-        dispatch( postWishFailure() )
-    })
+    try {
+        const res = await axios.post("https://masai-project.herokuapp.com/wihlist", payload);
+        dispatch(postWishSuccess());
+        dispatch(getWishData());
+    } catch (err) {
+        dispatch(postWishFailure());
+    }
 }
 
 
-export const deleteWishData = (idx) => dispatch => {
+export const deleteWishData = (idx) => async dispatch => {
     dispatch( deleteWishRequest() )
 
-    return axios.delete(`https://masai-project.herokuapp.com/wihlist/${idx}` )
-    .then(res => {
-        dispatch( deleteWishSuccess() )
-        dispatch( getWishData() )
-    })
-    .catch(err=> {
-        dispatch( deleteWishFailure() )
-    })
+    try {
+        const res = await axios.delete(`https://masai-project.herokuapp.com/wihlist/${idx}`);
+        dispatch(deleteWishSuccess());
+        dispatch(getWishData());
+    } catch (err) {
+        dispatch(deleteWishFailure());
+    }
 }
 
-export const getWishData = payload => dispatch => {
+export const getWishData = payload => async dispatch => {
     dispatch( getWishRequest() )
 
-    return axios.get("https://masai-project.herokuapp.com/wihlist", payload )
-    .then(res => {
-        dispatch( getWishSuccess(res.data) )
-    })
-    .catch(err=> {
-        dispatch( getWishFailure() )
-    })
+    try {
+        const res = await axios.get("https://masai-project.herokuapp.com/wihlist", payload);
+        dispatch(getWishSuccess(res.data));
+    } catch (err) {
+        dispatch(getWishFailure());
+    }
 }

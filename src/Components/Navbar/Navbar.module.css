@@ -7,7 +7,6 @@
 .logo{
     width: 45px;
     padding-top: 18px;
-    /* padding-left: 50px; */
     background-color: white;
     vertical-align: middle;
 
@@ -32,28 +31,6 @@
     color:rgb(40,44,63) ;
     font-size: 13px;
 }
-/* .navLinks2{
-    text-decoration: none;
-    color:rgb(40,44,63) ;
-    font-size: 13.5px;
-    margin-left: 20px;
-    padding-left: 40px;
-} */
-/* .navLinks2:hover{
-    color:black ;
-    font-weight: 600;
-    font-size: 14px;
-} */
-/* .navLinks3{
-    padding-left: 40px;
-    text-decoration: none;
-    color:rgb(243, 73, 101) ;
-    font-size: 15px;
-    margin-left: 20px;
-} */
-/* .navLinks>h4{
-  background-color: white;
-} */
 
 .categories{
     display: flex;
@@ -64,6 +41,7 @@
 }
 /* searchBar */
 .navserach{
+  position: relative;
     flex-grow: 0.3;
     background-color: white;
     margin-left: 0%;
@@ -92,7 +70,9 @@
 
 
 .dataResult {
-    margin-top: 5px;
+  position: absolute;
+    overflow: scroll;
+    cursor: pointer;
     width: 300px;
     height: 200px;
     background-color: white;
@@ -117,7 +97,6 @@
     margin-left: 10px;
   }
   .searchResults {
-    position: absolute;
     background: #fff;
     width: 100%;
     box-sizing: border-box;
@@ -130,7 +109,7 @@
   .searchResult .movieInfo {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   
   }
   .searchResult .movieInfo button {
     margin: 20px 10px;
@@ -141,6 +120,7 @@
     border: none;
     padding: 9px 0;
     border-radius: 4px;
+    width: 90%;
   }
   .searchResult {
     display: flex;
@@ -186,11 +166,6 @@
 
 /* Hover Links */
 
-/* .hoverdiv{
-    width: 25%;
-    background-color: rgb(243, 73, 101);
-    background-color: pi;
-} */
 .countnav{
     width: 17px;
     height: px;
@@ -218,29 +193,11 @@
 
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-width: 400px){
-  .navbar{
-    /* width: 100%; */
+  .dataResult{
+    margin-left: 11%;
+    margin-top: -7%;
   }
-  /* .userdiv{
-    display: none;
-  } */
- .bars{
-      /* width: 9%; */
-      /* height: 20%; */
-      /* display: flex !important;
-      flex-direction: column;
-      align-self: center;
-      position: relative; */
+  .logodiv{
+    display:none
   }
-  /* .countnav{
-    top: 184px;
-    left: 348px;
-  } */
-  /* .showProfile{
-    position: absolute;
-    top: 43px;
-    background-color: grey;
-    width: 200px;
-    right: -29px;
-  } */
 }
