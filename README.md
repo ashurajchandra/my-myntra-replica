@@ -1,3 +1,8 @@
+# This project is highly inspired from myntra ecommerce site
+# Mobile view url  of myntra site : https://www.myntra.com/tshirts
+
+# Desktop view url of myntra site:  https://www.myntra.com/tshirts
+
 # here is the live url of this project :
  https://main.d2mofxuxgtqvbs.amplifyapp.com/
 
