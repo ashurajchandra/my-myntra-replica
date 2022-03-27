@@ -25,8 +25,12 @@
 } */
 
 .horPartition {
-    display: grid;
-    grid-template-columns: 19% auto 42%;
+    /* display: grid;
+    grid-template-columns: 19% auto 42%; */
+    margin-top: 40px;
+    display: flex;
+    width: 50%;
+    margin-left: 20%;
     padding-bottom: 100px;
 }
 
@@ -122,23 +126,36 @@
 } */
 
 .productDiv {
-    display: grid;
-    grid-template-columns: 20% auto 20%;
+    /* display: grid;
+    grid-template-columns: 20% auto 20%; */
+    display: flex;
     border-bottom: 1px solid rgb(214, 211, 211);
 }
 
 /* .productDiv > div {
     border: 2px solid red;
 } */
+.prodImage{
+    width: 40%;
+}
+.bagProdInfo{
+    display: flex;
+    flex-direction: column;
+}
 
 .productDivSecond {
     text-align: left;
     font-size: 15px;
-    padding-left: 10px;
+    /* padding-left: 142px; */
+    padding-left: 14%;
     line-height: 1.5;
 }
 
 .productDivThird {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
     text-align: right;
     font-size: 15px;
     padding-right: 10px;
@@ -147,8 +164,11 @@
 }
 
 .gridBtn {
-    display: grid;
-    grid-template-columns: 20% 50% auto;
+    /* display: grid;
+    grid-template-columns: 20% 50% auto; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding-top: 10px;
     color: rgb(65, 63, 63);
     font-weight: bold;
@@ -521,4 +541,34 @@
 
 .lineThrough {
     text-decoration: line-through;
+}
+  /* For Mobile Phones Portrait or Landscape View */
+  @media screen and (max-width: 400px){
+    .productDiv{
+        flex-direction: column;
+    }
+    .prodImage{
+        width: 100%;
+    }
+    .productDivSecond{
+        padding-left: 0;
+    }
+    .productDivThird{
+        justify-content: space-between;
+    }
+    .removeDiv   {
+        width: 100%;
+        border: 2px solid white;
+        background-color: red;
+        color: white;
+    }
+    .horPartition{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+/* For Tablet View */
+@media screen and (max-width: 900px){
+
 }

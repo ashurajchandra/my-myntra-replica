@@ -67,9 +67,10 @@ const BagProducts = () => {
                         <div className={styles.bagCard} key={i}>
 
                             <div className={styles.productDiv}>
-                                <div>
+                                <div className={styles.prodImage}>
                                     <img src={e.images[0]} alt="" width="100%" />
                                 </div>
+                                <div className={styles.bagProdInfo}>
                                 <div className={styles.productDivSecond} >
                                     <div className={styles.fontBold} >{e.title}</div>
                                     <div>{e.sub_heading}</div>
@@ -81,6 +82,7 @@ const BagProducts = () => {
                                         <span className={`${styles.lineThrough} ${styles.gray}`}>₹{e.price}</span>
                                         <span className={`${styles.red}`}> {e.discount}% OFF</span>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                             
