@@ -1,11 +1,19 @@
 .Pmaindiv{
-    width: 99%;
-    height: 150vh;
+    /* width: 99%;
+     height: 150vh; 
     display: flex;
     padding-top: 15vh;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom: 30vh;
+    padding-bottom: 30vh; */
+    width: 99%;
+    display: flex;
+    padding-top: 76px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 .Psubdiv{
     width: 65%;
@@ -16,9 +24,13 @@
     justify-content: space-around;
 }
 .Psubdiv1{
-    width: 30%;
+    width: 32%;
     margin-top: 20px;
     text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .Pimagesubdiv{
     width: 49%;
@@ -113,19 +125,25 @@
  
 }
 .PbuttonBag{
-    padding: 10px 5px;
-    min-width: 60px;
+    /* padding: 10px 5px;
+    min-width: 60px; */
     font-weight: 500;
     cursor: pointer;
     background-color: #ff3e6c;
     border: 1px solid #ff3e6c;
     color: #fff;
     text-align: center;
-    width: 40%;
-    margin-right: 3%;
+    /* width: 40%;
+    margin-right: 3%; */
+
+    height: 40px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .pWhishlist{
-    padding: 12px 15px;
+    /* padding: 12px 15px; */
     font-weight: 500;
     cursor: pointer;
     border: 1px solid #d4d5d9;
@@ -133,18 +151,32 @@
     letter-spacing: .4px;
     color: #282c3f;
     border: 1px solid #282c3f;
-    width: 35%;
+    /* width: 35%; */
     text-align: center;
+
+    height: 40px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .buttondiv{
     display: flex;
     column-gap: 2px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 .repeatmrp{
     margin-top: 15px;
-    height: 12vh;
+    /* height: 12vh; */
     border-top: 2px solid #282c3f;
     border-bottom: 2px solid #282c3f;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 /* .delivery{
     margin-top: 6vh;
@@ -154,6 +186,7 @@
 .SizeDiv{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .Psizebutton2{
     background-color: #fff;
@@ -169,4 +202,27 @@
     margin: 10px;
     margin-bottom: 5vh;
 }
-  
+  /* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-width: 400px){
+
+}
+
+/* For Tablet View */
+@media screen and (max-width: 900px){
+.Pmaindiv{
+    flex-direction: column;
+}
+.Psubdiv{
+    width: 100%;
+}
+.Psubdiv1{
+    width: 100%;
+    padding: 20px;
+}
+.repeatmrp{
+    width: 90%;
+}
+.buttondiv{
+    justify-content: unset;
+}
+}
