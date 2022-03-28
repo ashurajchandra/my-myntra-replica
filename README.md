@@ -5,7 +5,7 @@
 ### Desktop view url of myntra site: 
    - https://www.myntra.com/tshirts
 
-### here is the live url of this project :
+### Here is the live url of this project :
   - https://main.d2mofxuxgtqvbs.amplifyapp.com/
 
 ### Tech stack used in this project is : 
