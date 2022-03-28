@@ -1,6 +1,5 @@
 {
   "name": "my-myntra-replica",
-  "homepage": "https://github.com/ashurajchandra/my-myntra-replica.git/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
